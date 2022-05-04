@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_PDS
 {
-    public partial class m_trabajador : Form
+    public partial class grupos : Form
     {
-        public m_trabajador()
+        public grupos()
         {
             InitializeComponent();
-        }
-
-        private void m_trabajador_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

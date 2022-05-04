@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_PDS
 {
-    public partial class m_alunmo : Form
+    public partial class buscar_alumno : Form
     {
-        public m_alunmo()
+        public buscar_alumno()
         {
             InitializeComponent();
-        }
-
-        private void m_alunmo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
