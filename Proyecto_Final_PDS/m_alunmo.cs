@@ -16,5 +16,10 @@ namespace Proyecto_Final_PDS
         {
             InitializeComponent();
         }
+
+        private void m_alunmo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

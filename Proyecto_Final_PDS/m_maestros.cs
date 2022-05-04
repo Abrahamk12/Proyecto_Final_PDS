@@ -16,5 +16,13 @@ namespace Proyecto_Final_PDS
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            login log = new login();
+            log.TopLevel = false;
+            panel1.Controls.Add(log);
+            log.Show();
+        }
     }
 }

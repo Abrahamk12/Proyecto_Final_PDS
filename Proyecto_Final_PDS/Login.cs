@@ -20,7 +20,7 @@ namespace Proyecto_Final_PDS
 
         private void user_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void password_TextChanged(object sender, EventArgs e)
@@ -28,14 +28,10 @@ namespace Proyecto_Final_PDS
 
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void entrar_Click(object sender, EventArgs e)
         {
             
         }
+
     }
 }
