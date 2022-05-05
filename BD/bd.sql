@@ -26,7 +26,6 @@ CREATE TABLE `alumnos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom_completo` varchar(45) NOT NULL,
   `usuario` varchar(45) NOT NULL,
-  `contraseña` varchar(45) NOT NULL,
   `direccion` varchar(45) NOT NULL,
   `correo` varchar(45) NOT NULL,
   `celular` varchar(10) NOT NULL,
@@ -43,7 +42,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-INSERT INTO `alumnos` VALUES (1,'Pepe Peres Pepino','Pizza','123','Pepinos','ppp@correo.com','1526487956','Berenjena Morales Jr','4815625987','2000-01-01');
+INSERT INTO `alumnos` VALUES (1,'Pepe Peres Pepino','Pizza','Pepinos','ppp@correo.com','1526487956','Berenjena Morales Jr','4815625987','2000-01-01');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,6 +58,7 @@ CREATE TABLE `calificaciones` (
   `usuario` varchar(45) NOT NULL,
   `calificacion` int NOT NULL,
   `n_parcial` int NOT NULL,
+  `estado` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -102,6 +102,30 @@ INSERT INTO `maestros` VALUES (1,'Sumito Peres Calvo','Pan','123','Panaderia La 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `materias`
+--
+
+DROP TABLE IF EXISTS `materias`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `materias` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(45) NOT NULL,
+  `materia` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `materias`
+--
+
+LOCK TABLES `materias` WRITE;
+/*!40000 ALTER TABLE `materias` DISABLE KEYS */;
+/*!40000 ALTER TABLE `materias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `nivel`
 --
 
@@ -111,7 +135,6 @@ DROP TABLE IF EXISTS `nivel`;
 CREATE TABLE `nivel` (
   `id` int NOT NULL AUTO_INCREMENT,
   `usuario` varchar(45) NOT NULL,
-  `usuario_m` varchar(45) NOT NULL,
   `grado` int NOT NULL,
   `grupo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `turno` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -125,38 +148,8 @@ CREATE TABLE `nivel` (
 
 LOCK TABLES `nivel` WRITE;
 /*!40000 ALTER TABLE `nivel` DISABLE KEYS */;
-INSERT INTO `nivel` VALUES (1,'','',1,'A','M'),(2,'','',1,'B','T'),(3,'','',2,'A','M'),(4,'','',2,'B','T');
+INSERT INTO `nivel` VALUES (1,'',1,'A','M'),(2,'',1,'B','T'),(3,'',2,'A','M'),(4,'',2,'B','T');
 /*!40000 ALTER TABLE `nivel` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `trabajador`
---
-
-DROP TABLE IF EXISTS `trabajador`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `trabajador` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nom_completo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `usuario_t` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `contraseña` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `roll` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `celular` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `direccion` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `correo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `trabajador`
---
-
-LOCK TABLES `trabajador` WRITE;
-/*!40000 ALTER TABLE `trabajador` DISABLE KEYS */;
-INSERT INTO `trabajador` VALUES (1,'Gominola tercero','Gansito','123','administrador','1526487956','Elvis tek','gt@correo.com');
-/*!40000 ALTER TABLE `trabajador` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -192,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-03  9:55:46
+-- Dump completed on 2022-05-05 15:43:54
