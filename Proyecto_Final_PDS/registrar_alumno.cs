@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_PDS
 {
-    public partial class m_alunmo : Form
+    public partial class registrar_alumno : Form
     {
-        public m_alunmo()
+        public registrar_alumno()
         {
             InitializeComponent();
         }
