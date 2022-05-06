@@ -41,14 +41,6 @@ namespace Proyecto_Final_PDS
             this.Close();
         }
 
-        private void mostrarCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mostrar_calificaciones m_cal = new mostrar_calificaciones();
-            m_cal.TopLevel = false;
-            panel1.Controls.Add(m_cal);
-            m_cal.Show();
-        }
-
         private void registrarAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             registrar_alumno n_aluumno = new registrar_alumno();

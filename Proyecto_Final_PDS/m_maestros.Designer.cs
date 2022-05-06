@@ -34,7 +34,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subirCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mostrarCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +82,7 @@
             // calificacionesToolStripMenuItem
             // 
             this.calificacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subirCalificacionesToolStripMenuItem,
-            this.mostrarCalificacionesToolStripMenuItem});
+            this.subirCalificacionesToolStripMenuItem});
             this.calificacionesToolStripMenuItem.Name = "calificacionesToolStripMenuItem";
             this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.calificacionesToolStripMenuItem.Text = "Calificaciones";
@@ -95,13 +93,6 @@
             this.subirCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.subirCalificacionesToolStripMenuItem.Text = "Subir calificaciones";
             this.subirCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.subirCalificacionesToolStripMenuItem_Click);
-            // 
-            // mostrarCalificacionesToolStripMenuItem
-            // 
-            this.mostrarCalificacionesToolStripMenuItem.Name = "mostrarCalificacionesToolStripMenuItem";
-            this.mostrarCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.mostrarCalificacionesToolStripMenuItem.Text = "Mostrar calificaciones";
-            this.mostrarCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.mostrarCalificacionesToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -180,7 +171,6 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subirCalificacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mostrarCalificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarAlumnoToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
