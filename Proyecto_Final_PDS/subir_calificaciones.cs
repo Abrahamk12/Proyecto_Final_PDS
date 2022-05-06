@@ -16,5 +16,20 @@ namespace Proyecto_Final_PDS
         {
             InitializeComponent();
         }
+
+        private void usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parcial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

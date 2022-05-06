@@ -46,7 +46,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(126, 381);
+            this.panel1.Size = new System.Drawing.Size(854, 381);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -61,9 +61,9 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(144, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 399);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(854, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 100);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 407);
+            this.ClientSize = new System.Drawing.Size(872, 499);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

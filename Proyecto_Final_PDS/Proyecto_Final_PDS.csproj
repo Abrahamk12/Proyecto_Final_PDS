@@ -56,12 +56,6 @@
     <Compile Include="buscar_alumno.Designer.cs">
       <DependentUpon>buscar_alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="grupos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="grupos.Designer.cs">
-      <DependentUpon>grupos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +82,6 @@
     <Compile Include="registrar_alumno.Designer.cs">
       <DependentUpon>registrar_alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sacar_promedios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sacar_promedios.Designer.cs">
-      <DependentUpon>Sacar_promedios.cs</DependentUpon>
-    </Compile>
     <Compile Include="subir_calificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +90,6 @@
     </Compile>
     <EmbeddedResource Include="buscar_alumno.resx">
       <DependentUpon>buscar_alumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="grupos.resx">
-      <DependentUpon>grupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -126,9 +111,6 @@
     </Compile>
     <EmbeddedResource Include="registrar_alumno.resx">
       <DependentUpon>registrar_alumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sacar_promedios.resx">
-      <DependentUpon>Sacar_promedios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="subir_calificaciones.resx">
       <DependentUpon>subir_calificaciones.cs</DependentUpon>

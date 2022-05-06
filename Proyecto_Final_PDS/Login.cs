@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 namespace Proyecto_Final_PDS
@@ -53,5 +52,9 @@ namespace Proyecto_Final_PDS
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
