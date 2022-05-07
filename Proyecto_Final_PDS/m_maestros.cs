@@ -52,8 +52,8 @@ namespace Proyecto_Final_PDS
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\t\tUNIVERSIDAD DE SONORA\n\tPROYECTO FINAL\n\tPRACTICA DE DESARROLLO DE SOFTWARE\n\t\tINTEGRANTES" +
-                "\n\tURIEL ABRAHAM LOPEZ FLEISCHER\n\tJULIAN FERNANDO FUENTES TRIAS\n\tJOSE LUIS TERAN SOTO");
+            MessageBox.Show("\t     UNIVERSIDAD DE SONORA\n\t\tPROYECTO FINAL\n\tPRACTICA DE DESARROLLO DE SOFTWARE\n\t\tINTEGRANTES" +
+                "\n\t  URIEL ABRAHAM LOPEZ FLEISCHER\n\t  JULIAN FERNANDO FUENTES TRIAS\n\t  JOSE LUIS TERAN SOTO");
         }
 
         private void m_maestros_Load(object sender, EventArgs e)

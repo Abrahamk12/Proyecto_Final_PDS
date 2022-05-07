@@ -37,10 +37,10 @@
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.matreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@
             // subirCalificacionesToolStripMenuItem
             // 
             this.subirCalificacionesToolStripMenuItem.Name = "subirCalificacionesToolStripMenuItem";
-            this.subirCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subirCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.subirCalificacionesToolStripMenuItem.Text = "Subir calificaciones";
             this.subirCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.subirCalificacionesToolStripMenuItem_Click);
             // 
@@ -108,16 +108,23 @@
             // registrarAlumnoToolStripMenuItem
             // 
             this.registrarAlumnoToolStripMenuItem.Name = "registrarAlumnoToolStripMenuItem";
-            this.registrarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.registrarAlumnoToolStripMenuItem.Text = "Registrar alumno";
             this.registrarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.registrarAlumnoToolStripMenuItem_Click);
             // 
             // buscarAlumnoToolStripMenuItem
             // 
             this.buscarAlumnoToolStripMenuItem.Name = "buscarAlumnoToolStripMenuItem";
-            this.buscarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.buscarAlumnoToolStripMenuItem.Text = "Buscar alumno";
             this.buscarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.buscarAlumnoToolStripMenuItem_Click);
+            // 
+            // matreriasToolStripMenuItem
+            // 
+            this.matreriasToolStripMenuItem.Name = "matreriasToolStripMenuItem";
+            this.matreriasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.matreriasToolStripMenuItem.Text = "Matrerias";
+            this.matreriasToolStripMenuItem.Click += new System.EventHandler(this.matreriasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -142,13 +149,6 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // matreriasToolStripMenuItem
-            // 
-            this.matreriasToolStripMenuItem.Name = "matreriasToolStripMenuItem";
-            this.matreriasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.matreriasToolStripMenuItem.Text = "Matrerias";
-            this.matreriasToolStripMenuItem.Click += new System.EventHandler(this.matreriasToolStripMenuItem_Click);
-            // 
             // m_maestros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -161,6 +161,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "m_maestros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maestro";
             this.Load += new System.EventHandler(this.m_maestros_Load);
             this.menuStrip1.ResumeLayout(false);
