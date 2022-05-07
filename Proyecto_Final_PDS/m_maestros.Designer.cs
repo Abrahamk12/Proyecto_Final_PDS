@@ -40,6 +40,7 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.matreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.opcionesToolStripMenuItem,
             this.calificacionesToolStripMenuItem,
             this.alumnosToolStripMenuItem,
+            this.matreriasToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -90,7 +92,7 @@
             // subirCalificacionesToolStripMenuItem
             // 
             this.subirCalificacionesToolStripMenuItem.Name = "subirCalificacionesToolStripMenuItem";
-            this.subirCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.subirCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.subirCalificacionesToolStripMenuItem.Text = "Subir calificaciones";
             this.subirCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.subirCalificacionesToolStripMenuItem_Click);
             // 
@@ -106,14 +108,14 @@
             // registrarAlumnoToolStripMenuItem
             // 
             this.registrarAlumnoToolStripMenuItem.Name = "registrarAlumnoToolStripMenuItem";
-            this.registrarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.registrarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registrarAlumnoToolStripMenuItem.Text = "Registrar alumno";
             this.registrarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.registrarAlumnoToolStripMenuItem_Click);
             // 
             // buscarAlumnoToolStripMenuItem
             // 
             this.buscarAlumnoToolStripMenuItem.Name = "buscarAlumnoToolStripMenuItem";
-            this.buscarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.buscarAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarAlumnoToolStripMenuItem.Text = "Buscar alumno";
             this.buscarAlumnoToolStripMenuItem.Click += new System.EventHandler(this.buscarAlumnoToolStripMenuItem_Click);
             // 
@@ -139,6 +141,13 @@
             this.panel1.Size = new System.Drawing.Size(906, 436);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // matreriasToolStripMenuItem
+            // 
+            this.matreriasToolStripMenuItem.Name = "matreriasToolStripMenuItem";
+            this.matreriasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.matreriasToolStripMenuItem.Text = "Matrerias";
+            this.matreriasToolStripMenuItem.Click += new System.EventHandler(this.matreriasToolStripMenuItem_Click);
             // 
             // m_maestros
             // 
@@ -175,5 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarAlumnoToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem registrarAlumnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matreriasToolStripMenuItem;
     }
 }

@@ -9,9 +9,8 @@ namespace Proyecto_Final_PDS
         MySqlCommand Query = new MySqlCommand();
         MySqlConnection Conexion;
         MySqlDataReader consultar;
-        public string sql = ";server=127.0.0.1;user id=root;database=pds;password=2117";
+        public string sql = ";server=127.0.0.2;user id=root;database=pds;password=2117";
         string usuario;
-        string contraseña;
 
         public Login()
         {
@@ -25,7 +24,7 @@ namespace Proyecto_Final_PDS
 
         private void password_TextChanged(object sender, EventArgs e)
         {
-            contraseña = password.Text;
+
         }
 
         private void entrar_Click(object sender, EventArgs e)
@@ -36,7 +35,6 @@ namespace Proyecto_Final_PDS
                 Conexion.ConnectionString = sql;
                 Conexion.Open();
                 MessageBox.Show("Conectado con éxito");
-                Conexion.Close();
 
                 Query.CommandText = "SELECT usuario_m FROM maestros WHERER usuario_m = " + "'" + usuario + "'";
                 Query.Connection = Conexion;
@@ -45,10 +43,12 @@ namespace Proyecto_Final_PDS
                 {
                     string user = consultar.GetString(0);
                 }
+
+                Conexion.Close();
             }
-            catch (MySqlException e)
+            catch (MySqlException er)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(er.Message);
             }
         }
 
