@@ -29,6 +29,7 @@ namespace Proyecto_Final_PDS
         private void entrar_Click(object sender, EventArgs e)
         {
             m_maestros maestros = new m_maestros();
+            int i = 0;
             try
             {
                 Conexion = new MySqlConnection();
