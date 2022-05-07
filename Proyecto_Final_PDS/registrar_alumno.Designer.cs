@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(848, 300);
+            this.panel1.Size = new System.Drawing.Size(848, 226);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -116,7 +116,7 @@
             // 
             // correo
             // 
-            this.correo.Location = new System.Drawing.Point(157, 160);
+            this.correo.Location = new System.Drawing.Point(157, 147);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(193, 26);
             this.correo.TabIndex = 14;
@@ -153,7 +153,7 @@
             // 
             // limpiar
             // 
-            this.limpiar.Location = new System.Drawing.Point(457, 249);
+            this.limpiar.Location = new System.Drawing.Point(457, 179);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(75, 35);
             this.limpiar.TabIndex = 10;
@@ -173,7 +173,7 @@
             // 
             // registrar
             // 
-            this.registrar.Location = new System.Drawing.Point(275, 249);
+            this.registrar.Location = new System.Drawing.Point(275, 179);
             this.registrar.Name = "registrar";
             this.registrar.Size = new System.Drawing.Size(75, 35);
             this.registrar.TabIndex = 8;
@@ -220,7 +220,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 163);
+            this.label4.Location = new System.Drawing.Point(16, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 19);
             this.label4.TabIndex = 3;
@@ -265,10 +265,11 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 332);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 244);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(854, 100);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -330,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 447);
+            this.ClientSize = new System.Drawing.Size(872, 350);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

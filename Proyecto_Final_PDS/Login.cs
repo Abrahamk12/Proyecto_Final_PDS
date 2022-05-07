@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 namespace Proyecto_Final_PDS
 {
     public partial class Login : Form
@@ -29,19 +28,26 @@ namespace Proyecto_Final_PDS
 
         private void entrar_Click(object sender, EventArgs e)
         {
+            m_maestros maestros = new m_maestros();
+            int i = 0;
             try
             {
                 Conexion = new MySqlConnection();
                 Conexion.ConnectionString = sql;
                 Conexion.Open();
-                MessageBox.Show("Conectado con éxito");
 
-                Query.CommandText = "SELECT usuario_m FROM maestros WHERER usuario_m = " + "'" + usuario + "'";
+                Query.CommandText = "SELECT usuario_m FROM maestros WHERE usuario_m = " + "'" + usuario + "';";
                 Query.Connection = Conexion;
                 consultar = Query.ExecuteReader();
                 while (consultar.Read())
                 {
-                    string user = consultar.GetString(0);
+                    string user = consultar.GetString(i);
+                    if(usuario == user)
+                    {
+                        maestros.Show();
+                        this.Hide();
+                    }
+                    i++;
                 }
 
                 Conexion.Close();

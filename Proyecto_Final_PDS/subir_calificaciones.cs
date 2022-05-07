@@ -98,7 +98,7 @@ namespace Proyecto_Final_PDS
                 {
                     string mate = consultar.GetString(i);
                     comboBox1.Items.Add(mate);
-                    i += 1;
+                    i++;
                 }
 
                 Conexion.Close();

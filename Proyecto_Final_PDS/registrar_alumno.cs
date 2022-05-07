@@ -42,6 +42,11 @@ namespace Proyecto_Final_PDS
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void correo_TextChanged(object sender, EventArgs e)
         {
             cor = correo.Text;
