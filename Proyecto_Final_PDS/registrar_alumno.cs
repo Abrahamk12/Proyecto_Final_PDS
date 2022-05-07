@@ -153,6 +153,9 @@ namespace Proyecto_Final_PDS
             tutor.Text = "";
             cel_em.Text = "";
             fecha.Text = "año-mes-dia";
+            grupo.Text = "";
+            grado.Text = "";
+            turno.Text = "";
         }
     }
 }
