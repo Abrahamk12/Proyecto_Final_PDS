@@ -69,7 +69,7 @@ namespace Proyecto_Final_PDS
             usuario.Text = "";
             califacion.Text = "";
             parcial.Text = "";
-            califacion.Text = "";
+            califacion.Text = "0";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
