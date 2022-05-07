@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Final_PDS
@@ -59,7 +52,7 @@ namespace Proyecto_Final_PDS
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\t\tUNIVERSIDAD DE SONORA\n\tPROYECTO FINAL\n\tPRACTICA DE DESARROLLO DE SOFTWARE\n\tINTEGRANTES" +
+            MessageBox.Show("\t\tUNIVERSIDAD DE SONORA\n\tPROYECTO FINAL\n\tPRACTICA DE DESARROLLO DE SOFTWARE\n\t\tINTEGRANTES" +
                 "\n\tURIEL ABRAHAM LOPEZ FLEISCHER\n\tJULIAN FERNANDO FUENTES TRIAS\n\tJOSE LUIS TERAN SOTO");
         }
 

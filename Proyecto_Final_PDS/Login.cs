@@ -8,7 +8,7 @@ namespace Proyecto_Final_PDS
         MySqlCommand Query = new MySqlCommand();
         MySqlConnection Conexion;
         MySqlDataReader consultar;
-        public string sql = ";server=127.0.0.2;user id=root;database=pds;password=2117";
+        public string sql = ";server=127.0.0.1;user id=root;database=pds;password=2117";
         string usuario;
 
         public Login()

@@ -11,7 +11,7 @@ namespace Proyecto_Final_PDS
         MySqlConnection Conexion;
         MySqlDataReader consultar;
         MySqlDataAdapter Adapter;
-        public string sql = ";server=127.0.0.2;user id=root;database=pds;password=2117";
+        public string sql = ";server=127.0.0.1;user id=root;database=pds;password=2117";
         string usuario;
         
 
