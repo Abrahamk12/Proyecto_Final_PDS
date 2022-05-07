@@ -10,7 +10,8 @@ namespace Proyecto_Final_PDS
         MySqlConnection Conexion;
         MySqlDataAdapter Adapter;
         public string sql = ";server=127.0.0.1;user id=root;database=pds;password=2117";
-        string nom, us, dir, cor, cel, tu, cel_e, fe;
+        string nom, us, dir, cor, cel, tu, cel_e, fe, gru, tur;
+        int gra;
 
         public registrar_alumno()
         {
@@ -47,6 +48,26 @@ namespace Proyecto_Final_PDS
 
         }
 
+        private void grado_TextChanged(object sender, EventArgs e)
+        {
+            gra = Int32.Parse(grado.Text);
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void grupo_TextChanged(object sender, EventArgs e)
+        {
+            gru = grupo.Text;
+        }
+
+        private void turno_TextChanged(object sender, EventArgs e)
+        {
+            tur = turno.Text;
+        }
+
         private void correo_TextChanged(object sender, EventArgs e)
         {
             cor = correo.Text;
@@ -74,7 +95,8 @@ namespace Proyecto_Final_PDS
 
         private void registrar_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM alumnos WHERE usuario = " + "'" + usuario + "'";
+            string query = "SELECT * FROM alumnos WHERE usuario = " + "'" + us + "';";
+            string query1 = "SELECT * FROM nivel WHERE usuario = " + "'" + us + "';";
             try
             {
                 Conexion = new MySqlConnection();
@@ -94,10 +116,25 @@ namespace Proyecto_Final_PDS
                 MySqlCommand command = new MySqlCommand(Query, Conexion);
                 command.ExecuteNonQuery();
 
+                string Query2 = "INSERT INTO nivel (usuario, grado, grupo, turno)"
+                    + "VALUES (" + "'" + us + "', " +
+                                      gra + ", " +
+                                "'" + gru + "', " +
+                                "'" + tur +"');";
+
+                MySqlCommand command2 = new MySqlCommand(Query2, Conexion);
+                command2.ExecuteNonQuery();
+
                 Adapter = new MySqlDataAdapter(query, Conexion);
                 DataTable dt1 = new DataTable();
                 Adapter.Fill(dt1);
                 dataGridView1.DataSource = dt1;
+
+                Adapter = new MySqlDataAdapter(query1, Conexion);
+                DataTable dt2 = new DataTable();
+                Adapter.Fill(dt2);
+                dataGridView2.DataSource = dt2;
+
                 Conexion.Close();
             }
             catch (MySqlException er)

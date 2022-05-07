@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.turno = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.grupo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.grado = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.cel_em = new System.Windows.Forms.TextBox();
             this.tutor = new System.Windows.Forms.TextBox();
             this.celular = new System.Windows.Forms.TextBox();
@@ -48,13 +54,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.turno);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.grupo);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.grado);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.cel_em);
             this.panel1.Controls.Add(this.tutor);
             this.panel1.Controls.Add(this.celular);
@@ -73,15 +87,67 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(5, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(848, 226);
+            this.panel1.Size = new System.Drawing.Size(670, 226);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // turno
+            // 
+            this.turno.Location = new System.Drawing.Point(356, 183);
+            this.turno.Name = "turno";
+            this.turno.Size = new System.Drawing.Size(100, 26);
+            this.turno.TabIndex = 23;
+            this.turno.TextChanged += new System.EventHandler(this.turno_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(296, 185);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 19);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Turno";
+            // 
+            // grupo
+            // 
+            this.grupo.Location = new System.Drawing.Point(195, 182);
+            this.grupo.Name = "grupo";
+            this.grupo.Size = new System.Drawing.Size(81, 26);
+            this.grupo.TabIndex = 21;
+            this.grupo.TextChanged += new System.EventHandler(this.grupo_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(141, 185);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 19);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Grupo";
+            // 
+            // grado
+            // 
+            this.grado.Location = new System.Drawing.Point(59, 185);
+            this.grado.Name = "grado";
+            this.grado.Size = new System.Drawing.Size(69, 26);
+            this.grado.TabIndex = 19;
+            this.grado.TextChanged += new System.EventHandler(this.grado_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 185);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 19);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Grado";
+            // 
             // cel_em
             // 
-            this.cel_em.Location = new System.Drawing.Point(594, 83);
+            this.cel_em.Location = new System.Drawing.Point(481, 78);
+            this.cel_em.MaxLength = 10;
             this.cel_em.Name = "cel_em";
             this.cel_em.Size = new System.Drawing.Size(182, 26);
             this.cel_em.TabIndex = 17;
@@ -90,7 +156,7 @@
             // 
             // tutor
             // 
-            this.tutor.Location = new System.Drawing.Point(594, 46);
+            this.tutor.Location = new System.Drawing.Point(481, 40);
             this.tutor.Name = "tutor";
             this.tutor.Size = new System.Drawing.Size(182, 26);
             this.tutor.TabIndex = 16;
@@ -99,7 +165,8 @@
             // 
             // celular
             // 
-            this.celular.Location = new System.Drawing.Point(594, 10);
+            this.celular.Location = new System.Drawing.Point(481, 3);
+            this.celular.MaxLength = 10;
             this.celular.Name = "celular";
             this.celular.Size = new System.Drawing.Size(182, 26);
             this.celular.TabIndex = 15;
@@ -108,7 +175,7 @@
             // 
             // correo
             // 
-            this.correo.Location = new System.Drawing.Point(157, 147);
+            this.correo.Location = new System.Drawing.Point(145, 145);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(193, 26);
             this.correo.TabIndex = 14;
@@ -117,7 +184,7 @@
             // 
             // direccion
             // 
-            this.direccion.Location = new System.Drawing.Point(157, 80);
+            this.direccion.Location = new System.Drawing.Point(145, 78);
             this.direccion.Multiline = true;
             this.direccion.Name = "direccion";
             this.direccion.Size = new System.Drawing.Size(193, 61);
@@ -127,7 +194,7 @@
             // 
             // usuario
             // 
-            this.usuario.Location = new System.Drawing.Point(157, 42);
+            this.usuario.Location = new System.Drawing.Point(145, 40);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(193, 26);
             this.usuario.TabIndex = 12;
@@ -136,7 +203,7 @@
             // 
             // nombre
             // 
-            this.nombre.Location = new System.Drawing.Point(157, 10);
+            this.nombre.Location = new System.Drawing.Point(145, 8);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(193, 26);
             this.nombre.TabIndex = 11;
@@ -145,7 +212,7 @@
             // 
             // limpiar
             // 
-            this.limpiar.Location = new System.Drawing.Point(457, 179);
+            this.limpiar.Location = new System.Drawing.Point(588, 177);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(75, 35);
             this.limpiar.TabIndex = 10;
@@ -155,7 +222,7 @@
             // 
             // fecha
             // 
-            this.fecha.Location = new System.Drawing.Point(594, 131);
+            this.fecha.Location = new System.Drawing.Point(481, 126);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(182, 26);
             this.fecha.TabIndex = 9;
@@ -165,7 +232,7 @@
             // 
             // registrar
             // 
-            this.registrar.Location = new System.Drawing.Point(275, 179);
+            this.registrar.Location = new System.Drawing.Point(481, 176);
             this.registrar.Name = "registrar";
             this.registrar.Size = new System.Drawing.Size(75, 35);
             this.registrar.TabIndex = 8;
@@ -176,7 +243,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(453, 131);
+            this.label8.Location = new System.Drawing.Point(361, 126);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 19);
             this.label8.TabIndex = 7;
@@ -185,7 +252,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(453, 86);
+            this.label7.Location = new System.Drawing.Point(361, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 19);
             this.label7.TabIndex = 6;
@@ -194,7 +261,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(453, 49);
+            this.label6.Location = new System.Drawing.Point(361, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 19);
             this.label6.TabIndex = 5;
@@ -203,7 +270,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(453, 17);
+            this.label5.Location = new System.Drawing.Point(361, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 4;
@@ -212,7 +279,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 150);
+            this.label4.Location = new System.Drawing.Point(4, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 19);
             this.label4.TabIndex = 3;
@@ -221,7 +288,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 83);
+            this.label3.Location = new System.Drawing.Point(4, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 2;
@@ -230,7 +297,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 49);
+            this.label2.Location = new System.Drawing.Point(4, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 19);
             this.label2.TabIndex = 1;
@@ -239,7 +306,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Location = new System.Drawing.Point(4, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 0;
@@ -250,15 +317,25 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 244);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(854, 100);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 70);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(13, 320);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(448, 60);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // registrar_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 350);
+            this.ClientSize = new System.Drawing.Size(872, 384);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,6 +347,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +374,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox turno;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox grupo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox grado;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

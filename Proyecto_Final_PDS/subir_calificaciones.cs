@@ -11,8 +11,9 @@ namespace Proyecto_Final_PDS
         MySqlConnection Conexion;
         MySqlDataReader consultar;
         public string sql = ";server=127.0.0.1;user id=root;database=pds;password=2117";
-        string us, ma, par, es;
-        int cal;
+        string us, ma, es;
+        int par;
+        double cal;
 
         public subir_calificaciones()
         {
@@ -26,7 +27,7 @@ namespace Proyecto_Final_PDS
 
         private void califacion_TextChanged(object sender, EventArgs e)
         {
-            cal = Int32.Parse(califacion.Text);
+            cal = Double.Parse(califacion.Text);
             if (cal >= 6)
             {
                 es = "aprobado";
@@ -47,8 +48,8 @@ namespace Proyecto_Final_PDS
 
                 string Query = "INSERT INTO calificaciones (usuario, calificacion, n_parcial, materia, estado)"
                     + "VALUES (" + "'" + us + "', " +
-                                        cal +
-                                "'" + par + "', " +
+                                        cal + "," +
+                                        par + ", " +
                                 "'" + ma + "', " +
                                 "'" + es + "');";
 
@@ -78,12 +79,11 @@ namespace Proyecto_Final_PDS
 
         private void parcial_TextChanged(object sender, EventArgs e)
         {
-            par = parcial.Text;
+            par = Int32.Parse(parcial.Text);
         }
 
         private void subir_calificaciones_Load(object sender, EventArgs e)
         {
-            int i = 0;
             try
             {
                 Conexion = new MySqlConnection();
@@ -95,9 +95,8 @@ namespace Proyecto_Final_PDS
                 consultar = Query.ExecuteReader();
                 while (consultar.Read())
                 {
-                    string mate = consultar.GetString(i);
+                    string mate = consultar.GetString(0);
                     comboBox1.Items.Add(mate);
-                    i++;
                 }
 
                 Conexion.Close();
