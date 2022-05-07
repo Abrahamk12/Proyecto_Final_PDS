@@ -28,7 +28,7 @@ namespace Proyecto_Final_PDS
         private void califacion_TextChanged(object sender, EventArgs e)
         {
             cal = Double.Parse(califacion.Text);
-            if (cal >= 6)
+            if (cal >= 60)
             {
                 es = "aprobado";
             }
