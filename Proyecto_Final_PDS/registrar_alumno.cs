@@ -154,7 +154,7 @@ namespace Proyecto_Final_PDS
             cel_em.Text = "";
             fecha.Text = "año-mes-dia";
             grupo.Text = "";
-            grado.Text = "";
+            grado.Text = "1";
             turno.Text = "";
         }
     }
