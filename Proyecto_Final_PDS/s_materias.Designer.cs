@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_PDS
 {
-    partial class mostrar_calificaciones
+    partial class s_materias
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // mostrar_calificaciones
+            // s_materias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 378);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "mostrar_calificaciones";
-            this.Text = "Mostrar Calificaciones";
+            this.ClientSize = new System.Drawing.Size(713, 293);
+            this.Name = "s_materias";
+            this.Text = "materias";
+            this.Load += new System.EventHandler(this.s_materias_Load);
             this.ResumeLayout(false);
 
         }

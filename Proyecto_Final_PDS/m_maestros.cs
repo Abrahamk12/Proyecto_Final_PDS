@@ -70,7 +70,10 @@ namespace Proyecto_Final_PDS
 
         private void matreriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            s_materias mater = new s_materias();
+            mater.TopLevel = false;
+            panel1.Controls.Add(mater);
+            mater.Show();
         }
     }
 }

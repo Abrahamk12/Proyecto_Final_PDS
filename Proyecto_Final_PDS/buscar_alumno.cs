@@ -32,27 +32,29 @@ namespace Proyecto_Final_PDS
 
         private void buscar_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM nivel WHERER usuario = " + "'" + usuario + "'";
-            string query1 = "SELECT * FROM calificaciones WHERER usuario = " + "'" + usuario + "'";
-            string query2 = "SELECT * FROM alumnos WHERER usuario = " + "'" + usuario + "'";
+            string query = "SELECT * FROM nivel WHERE usuario = " + "'" + usuario + "';";
+            string query1 = "SELECT * FROM calificaciones WHERE usuario = " + "'" + usuario + "';";
+            string query2 = "SELECT * FROM alumnos WHERE usuario = " + "'" + usuario + "';";
             try
             {
                 Conexion = new MySqlConnection();
                 Conexion.ConnectionString = sql;
                 Conexion.Open();
 
-                Adapter = new MySqlDataAdapter(query, Conexion.ConnectionString = sql);
+                Adapter = new MySqlDataAdapter(query, Conexion);
                 DataTable dt = new DataTable();
-                dataGridView1.DataSource = Adapter.Fill(dt);
+                Adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
 
-                Adapter = new MySqlDataAdapter(query1, Conexion.ConnectionString = sql);
+                Adapter = new MySqlDataAdapter(query1, Conexion);
                 DataTable dt1 = new DataTable();
                 Adapter.Fill(dt1);
-                dataGridView2.DataSource = Adapter.Fill(dt1);
+                dataGridView2.DataSource = dt1;
 
-                Adapter = new MySqlDataAdapter(query2, Conexion.ConnectionString = sql);
+                Adapter = new MySqlDataAdapter(query2, Conexion);
                 DataTable dts = new DataTable();
-                dataGridView3.DataSource = Adapter.Fill(dts);
+                Adapter.Fill(dts);
+                dataGridView3.DataSource = dts;
 
                 Conexion.Close();
 

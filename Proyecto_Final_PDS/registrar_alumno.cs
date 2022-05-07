@@ -74,7 +74,7 @@ namespace Proyecto_Final_PDS
 
         private void registrar_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM alumnos WHERER usuario = " + "'" + usuario + "'";
+            string query = "SELECT * FROM alumnos WHERE usuario = " + "'" + usuario + "'";
             try
             {
                 Conexion = new MySqlConnection();
@@ -97,8 +97,7 @@ namespace Proyecto_Final_PDS
                 Adapter = new MySqlDataAdapter(query, Conexion);
                 DataTable dt1 = new DataTable();
                 Adapter.Fill(dt1);
-                dataGridView1.DataSource = Adapter.Fill(dt1);
-
+                dataGridView1.DataSource = dt1;
                 Conexion.Close();
             }
             catch (MySqlException er)

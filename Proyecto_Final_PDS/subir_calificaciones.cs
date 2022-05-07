@@ -89,9 +89,8 @@ namespace Proyecto_Final_PDS
                 Conexion = new MySqlConnection();
                 Conexion.ConnectionString = sql;
                 Conexion.Open();
-                MessageBox.Show("Conectado con éxito");
 
-                Query.CommandText = "SELECT materia FROM materia";
+                Query.CommandText = "SELECT materia FROM materias";
                 Query.Connection = Conexion;
                 consultar = Query.ExecuteReader();
                 while (consultar.Read())
